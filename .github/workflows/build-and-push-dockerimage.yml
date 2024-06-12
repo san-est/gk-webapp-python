@@ -37,4 +37,4 @@ jobs:
     - name: Build and Push the Docker image
       run: docker build . --file  Dockerfile --tag ghcr.io/san-est/gk-webapp
     - name: Push Docker image
-      run: docker push ghcr.io/san-est/gk-webapp
+      run: docker push ghcr.io/san-est/gk-webapp-python/gk-webapp
