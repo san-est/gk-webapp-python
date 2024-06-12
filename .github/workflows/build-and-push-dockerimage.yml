@@ -12,7 +12,7 @@ on:
 env:
   REGISTRY: https://ghcr.io
   IMAGE_NAME: san-est/gk-webapp
-  IMAGE_TAG: $(date +%s)
+  IMAGE_TAG: 1.0.${{github.run_number}}
 
 jobs:
 
