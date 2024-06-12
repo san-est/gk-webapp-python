@@ -1,4 +1,4 @@
-name: Docker Image Build and Push to ghcr :)
+name: Docker Image Build and Push to ghcr
 
 on:
   pull_request:
