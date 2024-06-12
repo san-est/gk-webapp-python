@@ -12,7 +12,7 @@ on:
 env:
   REGISTRY: https://ghcr.io
   IMAGE_NAME: san-est/gk-webapp
-  IMAGE:TAG: $(date +%s)
+  IMAGE_TAG: $(date +%s)
 
 jobs:
 
@@ -33,8 +33,8 @@ jobs:
         registry: ${{ env.REGISTRY }}
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Build and Push the Docker image
-      run: docker build . --file  Dockerfile --tag ghcr.io/san-est/gk-webapp:latest
-    - name: Push Docker image
-      run: docker push ghcr.io/san-est/gk-webapp:latest
+    - name: Build and push docker image
+      uses: docker/build-push-action@v5
+      with:
+        push: true
+        tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{env.IMAGE_TAG}}
