@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY: ghcr.io
+  REGISTRY: https://ghcr.io
   IMAGE_NAME: san-est/gk-webapp
   IMAGE:TAG: $(date +%s)
 
