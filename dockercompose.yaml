@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  devnet:
+    image: ghcr.io/san-est/gk-webapp:latest
+    ports:
+      - "8080:8080"
